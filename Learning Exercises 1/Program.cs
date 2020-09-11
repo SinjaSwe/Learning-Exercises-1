@@ -38,6 +38,9 @@ namespace Learning_Exercises_1
                         case 3:
                             RunExerciseThree();
                             break;
+                        case 4:
+                            RunExerciseFour();
+                            break;
                         case -1:
                             keepAlive = false;
                             break;
@@ -119,13 +122,16 @@ namespace Learning_Exercises_1
                     Console.ReadLine();
                 }
 
+
                 RunExerciseFour();
-                
+
                 static void RunExerciseFour()
 
                 {
                     String str = "The quick fox Jumped Over the DOG";
-
+                    Console.WriteLine("OldString: " + str);
+                    //replace the ending
+                    Console.WriteLine("NewString: " + str.Replace("Over the DOG", "over the lazy dog."));
                 }
 
 
