@@ -50,6 +50,9 @@ namespace Learning_Exercises_1
                         case 7:
                             RunExerciseSeven();
                             break;
+                        case 8:
+                            RunExerciseEight();
+                            break;
                         case -1:
                             keepAlive = false;
                             break;
@@ -190,10 +193,21 @@ namespace Learning_Exercises_1
                     Console.WriteLine("The area is(2 πr 2 ): " + (2 *(Math.PI*(radius*radius))));
                     Console.WriteLine("The volumn is:" + (4*(Math.PI*(radius*radius*radius))));
                     Console.ReadLine();
-
-
                 }
 
+                RunExerciseEight();
+
+                static void RunExerciseEight()
+                {
+                    double number;
+                    Console.Write("Enter a decimal number: ");
+                    number = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("The square root of this number is: " + Math.Sqrt(number));
+                    Console.WriteLine("The number to the power of 2 is: " + Math.Pow(number, 2));
+                    Console.WriteLine("The number to the power of 10 is: " + Math.Pow(number, 10));
+                    Console.ReadLine();
+                 }
 
                 
             }
