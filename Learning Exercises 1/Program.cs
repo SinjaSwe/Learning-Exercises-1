@@ -53,6 +53,12 @@ namespace Learning_Exercises_1
                         case 8:
                             RunExerciseEight();
                             break;
+                        case 9:
+                            RunExerciseNine();
+                            break;
+                        care 10:
+                            RunExerciseTen();
+                            break;
                         case -1:
                             keepAlive = false;
                             break;
@@ -209,11 +215,94 @@ namespace Learning_Exercises_1
                     Console.ReadLine();
                  }
 
+                RunExerciseNine();
+
+                static void RunExerciseNine()
+
+                {
+                    int birthyear;
+                    int age;
+                    string firstname;
+                    string answer = "Y";
+
+                    Console.WriteLine("Welcome to Sinead's Irish Pub!");
+                    Console.WriteLine("Welcome! What is your name? ");
+                    firstname = Console.ReadLine();
+                    Console.WriteLine("Welcome" + " " + firstname + " " + "to my pub!");
+                    Console.WriteLine("What year were you born?");
+                    birthyear = Convert.ToInt32(Console.ReadLine());
+                    age = DateTime.Now.Year - birthyear;
+
+                    // First if statement
+
+                    if (age >= 18)
+                    {
+                        Console.WriteLine("Would you like a beer? Y or N");
+                        answer = Console.ReadLine();
+
+
+                        if (answer.Equals("Y"))
+                        {
+                            Console.WriteLine("Great! Your beer will be right over!");
+                        }
+
+                        else if (answer.Equals("N"))
+                        {
+                            Console.WriteLine("Would you like a coke instead?");
+                            answer = Console.ReadLine();
+
+                            if (answer.Equals("Y"))
+                            {
+                                Console.WriteLine("Ok, I'll get you a coke");
+                            }
+
+                            else
+                            {
+                                Console.WriteLine("That's a shame. You'll have to go thirsty!");
+                            }
+                        }
+
+                    }
+
+                    else if (age < 18)
+                    {
+                        Console.WriteLine("Would you like a coke? Y or N");
+                        answer = Console.ReadLine();
+
+                        if (answer.Equals("Y"))
+                        {
+                            Console.WriteLine("Ok, I'll get you a coke");
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("That's a shame. You'll have to go thirsty!");
+                        }
+
+                    }
+
+                }
+
+
+                RunExerciseTen();
+
+                static void RunExerciseTen(
+
+                    {
+
+
+                }
+
+
+
+
+            }
+
                 
             }
         }
 
     }
 
-}
+
 
