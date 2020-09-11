@@ -24,7 +24,7 @@ namespace Learning_Exercises_1
             {
                 try
                 {
-                    Console.WriteLine("Enter assignment number (or -1 to exit): ");
+                    Console.Write("Enter assignment number (or -1 to exit): ");
                     var assignmentChoice = int.Parse(Console.ReadLine() ?? "");
                     Console.ForegroundColor = ConsoleColor.Green;
                     switch (assignmentChoice)
@@ -40,6 +40,12 @@ namespace Learning_Exercises_1
                             break;
                         case 4:
                             RunExerciseFour();
+                            break;
+                        case 5:
+                            RunExerciseFive();
+                            break;
+                        case 6:
+                            RunExerciseFive();
                             break;
                         case -1:
                             keepAlive = false;
@@ -126,7 +132,6 @@ namespace Learning_Exercises_1
                 RunExerciseFour();
 
                 static void RunExerciseFour()
-
                 {
                     String str = "The quick fox Jumped Over the DOG";
                     Console.WriteLine("OldString: " + str);
@@ -135,13 +140,26 @@ namespace Learning_Exercises_1
                 }
 
 
+                RunExerciseFive();
+
+                static void RunExerciseFive()
+                {
+                    String str = "Arrays are very common in progamming, they look somethink like: [1,2,3,4,5]";
+                    String newStr1 = str.Remove(0, 64);
+                    String newStr2 = newStr1.Remove(2, 4);
+                    Console.WriteLine("Original String: " + str);
+                    Console.WriteLine("New string: " + newStr2.Insert(6, ",6,7,8,9,10"));
+                }
 
 
 
 
+
+                
             }
         }
 
     }
 
 }
+
