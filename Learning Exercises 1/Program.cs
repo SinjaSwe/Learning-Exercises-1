@@ -47,6 +47,9 @@ namespace Learning_Exercises_1
                         case 6:
                             RunExerciseSix();
                             break;
+                        case 7:
+                            RunExerciseSeven();
+                            break;
                         case -1:
                             keepAlive = false;
                             break;
@@ -172,6 +175,22 @@ namespace Learning_Exercises_1
                     Console.WriteLine("The sum is: " + (firstNumber + secondNumber));
                     Console.WriteLine("The product is: " + (firstNumber * secondNumber));
                     Console.WriteLine("The ratio is: " + (firstNumber / (double)secondNumber));
+                    
+
+                }
+
+                RunExerciseSeven();
+
+                static void RunExerciseSeven()
+                {
+                    double radius;
+                    Console.Write("Enter the radius:");
+                    radius = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("The area is(2 πr 2 ): " + (2 *(Math.PI*(radius*radius))));
+                    Console.WriteLine("The volumn is:" + (4*(Math.PI*(radius*radius*radius))));
+                    Console.ReadLine();
+
 
                 }
 
