@@ -45,7 +45,7 @@ namespace Learning_Exercises_1
                             RunExerciseFive();
                             break;
                         case 6:
-                            RunExerciseFive();
+                            RunExerciseSix();
                             break;
                         case -1:
                             keepAlive = false;
@@ -152,7 +152,28 @@ namespace Learning_Exercises_1
                 }
 
 
+                RunExerciseSix();
 
+                static void RunExerciseSix()
+                {
+
+                    int firstNumber;
+                    int secondNumber;
+
+                    Console.Write("Enter your first number:");
+                    firstNumber = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("Enter your second number:");
+                    secondNumber = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("Biggest Number: " + Math.Max(firstNumber, secondNumber));
+                    Console.WriteLine("Smallest Number: " + Math.Min(firstNumber, secondNumber));
+                    Console.WriteLine("The difference is: " + (firstNumber - secondNumber));
+                    Console.WriteLine("The sum is: " + (firstNumber + secondNumber));
+                    Console.WriteLine("The product is: " + (firstNumber * secondNumber));
+                    Console.WriteLine("The ratio is: " + (firstNumber / (double)secondNumber));
+
+                }
 
 
                 
