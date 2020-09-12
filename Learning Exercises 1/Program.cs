@@ -59,6 +59,9 @@ namespace Learning_Exercises_1
                         case 10:
                             RunExerciseTen();
                             break;
+                        case 11:
+                            RunExerciseEleven();
+                            break;
                         case -1:
                             keepAlive = false;
                             break;
@@ -316,7 +319,6 @@ namespace Learning_Exercises_1
 
                         break;
 
-
                         /*case "2":
                             string caseTwo;
 
@@ -360,7 +362,39 @@ namespace Learning_Exercises_1
                 }
 
 
+                RunExerciseEleven();
 
+                static void RunExerciseEleven()
+
+                {
+                    int number;
+
+                    Console.WriteLine(" Enter an integer number:");
+                    number = Convert.ToInt32(Console.ReadLine());
+
+                    if (number < 0)
+
+                    {
+                        Console.WriteLine("Error! Error! Error!");
+                    }
+                        
+                    else
+                    {
+                        Console.WriteLine("Well done!");
+                    }
+
+                   for (int i = 0; i<=10; i++)
+
+                    {
+                        Console.WriteLine(i);
+                    }
+
+                   for (int i = 10; i>=0; i--)
+                    {
+                        Console.WriteLine(i);
+                    }
+
+                }
 
             }
 
