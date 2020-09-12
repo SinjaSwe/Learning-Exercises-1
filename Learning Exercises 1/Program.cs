@@ -56,7 +56,7 @@ namespace Learning_Exercises_1
                         case 9:
                             RunExerciseNine();
                             break;
-                        care 10:
+                        case 10:
                             RunExerciseTen();
                             break;
                         case -1:
@@ -286,9 +286,75 @@ namespace Learning_Exercises_1
 
                 RunExerciseTen();
 
-                static void RunExerciseTen(
+                static void RunExerciseTen()
+
+                {                    
+                Console.Write("----menu----\nEnter one of the following options: ?\n1\n2\n3\nSelection: ");
+                string userInput = Console.ReadLine();             
+                int numberA;
+                int numberB;
+                
+                switch (userInput)
 
                     {
+                        case "1":
+                        Console.WriteLine("Enter a number:");
+                        numberA = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter a number:");
+                        numberB = Convert.ToInt32(Console.ReadLine());
+
+                        if (numberB > 0)
+                        {
+                            Console.WriteLine("Your answer is: " + (numberA / numberB));
+                        }
+
+                        else 
+                        {
+
+                            Console.WriteLine("Error! You can not divide by zero!");
+                        }
+
+                        break;
+
+
+                        /*case "2":
+                            string caseTwo;
+
+                            RunExerciseFour n = new RunExerciseFour();
+
+                            //calling the FindMax method
+                            caseTwo = n.RunExerciseFour;
+                            Console.WriteLine(caseT);
+                            Console.ReadLine();
+
+                            Console.WriteLine(caseTwo);
+                        break;
+                        */
+
+                        case "3":
+                            
+                            if (Console.BackgroundColor == ConsoleColor.Black)
+
+                            { Console.BackgroundColor = ConsoleColor.Red;
+                                Console.BackgroundColor = ConsoleColor.Green;
+                                Console.Clear();
+
+                                    }
+
+                            break;
+
+
+                            /*static void RunExerciseFour()
+                            {
+                                String str = "The quick fox Jumped Over the DOG";
+                                Console.WriteLine("OldString: " + str);
+                                //replace the ending
+                                Console.WriteLine("NewString: " + str.Replace("Over the DOG", "over the lazy dog."));
+                            }*/
+
+
+                    }
+
 
 
                 }
@@ -300,7 +366,11 @@ namespace Learning_Exercises_1
 
                 
             }
+
+        private class RunExerciseFour
+        {
         }
+    }
 
     }
 
