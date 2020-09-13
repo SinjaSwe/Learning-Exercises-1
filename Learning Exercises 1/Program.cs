@@ -62,6 +62,9 @@ namespace Learning_Exercises_1
                         case 11:
                             RunExerciseEleven();
                             break;
+                        case 12:
+                            RunExerciseTwelve();
+                            break;
                         case -1:
                             keepAlive = false;
                             break;
@@ -405,20 +408,40 @@ namespace Learning_Exercises_1
 
                         if (i % 2 == 0)
                         {
-                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.ForegroundColor = ConsoleColor.Red;
                         }
                         else
                         {
-                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.ForegroundColor = ConsoleColor.Green;
                         }
                     }
 
                 }
 
+                RunExerciseTwelve();
+
+                static void RunExerciseTwelve()
+                {
+
+                    for (int i=1; i<10;i++)
+                    {
+                        for (int j = 0; j <=10; j++)
+                        {
+                            Console.WriteLine("{0}x{1} = {2}", i, j, i * j);
+                        }
+                        Console.WriteLine("===================");
+                    }
+                    Console.ReadKey();
+
+
+                }
+
+
+
             }
 
-                
-            }
+
+        }
 
         private class RunExerciseFour
         {
