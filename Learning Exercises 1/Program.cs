@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Transactions;
 
 namespace Learning_Exercises_1
@@ -64,6 +66,9 @@ namespace Learning_Exercises_1
                             break;
                         case 12:
                             RunExerciseTwelve();
+                            break;
+                        case 18:
+                            RunExercise18();
                             break;
                         case -1:
                             keepAlive = false;
@@ -436,6 +441,131 @@ namespace Learning_Exercises_1
 
                 }
 
+                RunExercise18();
+
+                static void RunExercise18()
+
+                {
+                    int Min = 0;
+                    int Max = 125;
+                    
+                    int[] elements = new int[10]; // create a new array
+
+                    Random randno = new Random();
+                    
+                    for (int x = 0; x < elements.Length; x++)
+                    {
+                        elements[x] = randno.Next(Min, Max);
+                    }
+
+                    foreach (var item in elements) // renames the elements temp to create them in the foreach loop to print
+                    {
+                        Console.WriteLine(item);
+                        //Console.WriteLine(1.0 / item);
+                    }
+
+                    // Step 2: Create an empty array
+
+
+                    double[] empty1 = new double[10]; // create a new array
+                    double temp; //define a double
+
+
+                    for (int x = 0; x < elements.Length; x++) // loop through the first array as you are using those int so it's a copy of the above
+                    {
+                        temp = 1.0 / elements[x]; // keep x as not in the same loop. Otherwise would need to change
+                        empty1[x] = temp; // creates the new array by applying the temp values into the new array
+                        Console.WriteLine("test: " + temp);
+
+                        //Console.WriteLine(temp);
+                    }
+
+                    for (int x = 0; x < empty1.Length; x++)
+                    {
+                        Console.WriteLine(empty1[x]);
+                    }
+
+                    /*for (double y = 0; y == 10; y++)
+
+                        
+                    {
+                        Console.WriteLine("Divison into 1{0} = {1}", y, (Convert.ToDouble(elements))[y]);
+                    }
+
+                 
+                    
+   //var empty1 = new double[10];
+
+                                       /*
+                    for (int y = 0; y < empty1.Length; y++)
+
+                    {
+
+                        {
+                            table[y, x] = empty1 / elements;
+                        }
+
+
+                        // return  / elements;
+                    }
+
+        static void SetMultiNumbers(double[,] table)
+        {
+            for (double y = 0; y < 10; y++)
+            {
+                for (int x = 0; x < 10; x++)
+                {
+                    table[y, x] = (y + 1) * (x + 1);
+                }
+            }
+        }
+
+
+
+        
+         * foreach (var)
+
+
+
+        Console.WriteLine(empty1.Length == 0);
+
+        // Divide 
+
+        double result = DivideOne(empty1);
+        Console.WriteLine("Output: {0}", result);
+
+        static double DivideOne (double[] array)
+        {
+            return empty1[0] / elements;
+
+         }
+
+
+
+        {
+            // Step 1: create 3-element array.
+            int[] array = { -5, -6, -7 };
+
+            // Step 2: pass array reference to method.
+            int result = MultiplyFirstElement(array);
+            Console.WriteLine("FIRST ELEMENT MULTIPLIED: {0}", result);
+        }
+
+        static int MultiplyFirstElement(int[] array)
+        {
+            // Step 3: multiply the first element by 2 and return it.
+            return array[0] * 2;
+        }*/
+
+
+
+
+
+
+                }
+
+
+
 
 
             }
@@ -443,9 +573,7 @@ namespace Learning_Exercises_1
 
         }
 
-        private class RunExerciseFour
-        {
-        }
+        
     }
 
     }
